@@ -1,1 +1,11 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: asic demo
+  description: Swagger Asic Demo Sample REST API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: user:guest
+  definition:
+    $text: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/AbnLookup.yaml
