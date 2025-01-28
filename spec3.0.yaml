@@ -23,25 +23,18 @@ externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
-  - url: https://petstore3.swagger.io/api/v3
+  - url: https://t7snohiumi.execute-api.ap-southeast-2.amazonaws.com/develop
 tags:
-  - name: pet
-    description: Everything about your Pets
+  - name: lookup
+    description: ABN lookup
     externalDocs:
       description: Find out more
       url: http://swagger.io
-  - name: store
-    description: Access to Petstore orders
-    externalDocs:
-      description: Find out more about our store
-      url: http://swagger.io
-  - name: user
-    description: Operations about user
 paths:
   /lookup:
     get:
       tags:
-        - pet
+        - lookup
       summary: Finds Pets by status
       description: Multiple status values can be provided with comma separated strings
       operationId: findPetsByStatus
@@ -49,15 +42,10 @@ paths:
         - name: status
           in: query
           description: Status values that need to be considered for filter
-          required: false
+          required: true
           explode: true
           schema:
             type: string
-            default: available
-            enum:
-              - available
-              - pending
-              - sold
       responses:
         '200':
           description: successful operation
@@ -165,12 +153,6 @@ components:
         status:
           type: string
           description: pet status in the store
-          enum:
-            - available
-            - pending
-            - sold
-      xml:
-        name: pet
     ApiResponse:
       type: object
       properties:
