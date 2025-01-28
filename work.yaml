@@ -2,11 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: petstore3
+  annotations:
+    backstage.io/techdocs-ref: value
   description: Swagger PetStore Sample REST API
-  links:
-    url: https://dashboard.example.com
-    title: My Dashboard
-    icon: dashboard
 spec:
   type: openapi
   lifecycle: production
