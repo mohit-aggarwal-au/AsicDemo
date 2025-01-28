@@ -4,9 +4,9 @@ metadata:
   name: petstore3
   description: Swagger PetStore Sample REST API
   links:
-    - url: https://dashboard.example.com
-      title: My Dashboard
-      icon: dashboard
+    url: https://dashboard.example.com
+    title: My Dashboard
+    icon: dashboard
 spec:
   type: openapi
   lifecycle: production
