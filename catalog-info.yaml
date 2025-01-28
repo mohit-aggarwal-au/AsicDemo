@@ -25,5 +25,9 @@ spec:
   type: openapi
   lifecycle: production
   owner: user:guest
+  providesApis:
+    - payment-api
+  consumesApis:
+    - user-profile-api
   definition:
     $text: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/spec3.0.yaml
