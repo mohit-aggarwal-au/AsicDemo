@@ -3,6 +3,10 @@ kind: API
 metadata:
   name: petstore2
   description: Swagger PetStore Sample REST API
+  links:
+    - url: https://dashboard.example.com
+      title: My Dashboard
+      icon: dashboard
 spec:
   type: openapi
   lifecycle: production
