@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: asic demo
+  name: asic
   description: Swagger Asic Demo Sample REST API
 spec:
   type: openapi
