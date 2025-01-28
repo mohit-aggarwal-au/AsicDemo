@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Swagger Petstore - OpenAPI 3.0
+  title: ABN Lookup
   description: ABN lookup demo
   termsOfService: http://swagger.io/terms/
   contact:
@@ -22,13 +22,13 @@ paths:
     get:
       tags:
         - lookup
-      summary: Finds Pets by status
+      summary: ABN Lookup
       description: Multiple status values can be provided with comma separated strings
-      operationId: findPetsByStatus
+      operationId: abnLookup
       parameters:
-        - name: status
+        - name: abn
           in: query
-          description: Status values that need to be considered for filter
+          description: abn value to be queried
           required: true
           explode: true
           schema:
