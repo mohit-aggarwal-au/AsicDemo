@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: abn_acn_lookup_demo
+  name: abn_acn_lookup_demo_v2
   tags:
     - lookup
     - microservices
