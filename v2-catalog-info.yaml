@@ -17,10 +17,10 @@ metadata:
       icon: logs
   annotations:
     backstage.io/techdocs-ref: url:https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/x0l6okhq8j/documentation?api=x0l6okhq8j&experience=rest-import&region=ap-southeast-2
-    github.com/project-slug: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/LookupV2.yaml
-    monitoring-url: https://ap-southeast-2.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-2#dashboards/dashboard/lookup-v2-dashboard?start=PT12H&end=null&autoRefresh=10
-    pagerduty.com/service-url: https://pagerduty.com/services/ABC123
-  description: Swagger PetStore Sample REST API
+    github.com/project-slug: url:https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/LookupV2.yaml
+    monitoring-url: url:https://ap-southeast-2.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-2#dashboards/dashboard/lookup-v2-dashboard?start=PT12H&end=null&autoRefresh=10
+    pagerduty.com/service-url: url:https://pagerduty.com/services/ABC123
+  description: Swagger ABN lookup Sample REST API
 spec:
   type: openapi
   lifecycle: production
