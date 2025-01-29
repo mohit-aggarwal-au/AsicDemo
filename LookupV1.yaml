@@ -18,7 +18,7 @@ tags:
       description: Find out more
       url: http://swagger.io
 paths:
-  /lookup:
+  /v1/lookup:
     get:
       tags:
         - lookup
@@ -61,7 +61,48 @@ paths:
         '501':
           description: Method Not Implemented
 
-
+  /v2/lookup:
+    get:
+      tags:
+        - lookup
+      summary: ABN Lookup
+      description: Multiple status values can be provided with comma separated strings
+      operationId: abnLookupv2
+      parameters:
+        - name: abn
+          in: query
+          description: abn value to be queried
+          required: true
+          explode: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema: 
+                  $ref: '#/components/schemas/AbnLookUpResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorised
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '405':
+          description: Not Allowed
+        '408':
+          description: Request Timeout
+        '415':
+          description: Unsupported Media Type
+        '422':
+          description: Unprocessable Entity
+        '500':
+          description: Internal Server Error
+        '501':
+          description: Method Not Implemented
 components:
   schemas:
 
