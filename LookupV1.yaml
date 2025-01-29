@@ -24,7 +24,7 @@ paths:
         - lookup
       summary: ABN Lookup
       description: Multiple status values can be provided with comma separated strings
-      operationId: abnLookupv2
+      operationId: abnLookupv1
       parameters:
         - name: abn
           in: query
