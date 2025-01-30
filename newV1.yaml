@@ -1,0 +1,221 @@
+openapi: 3.0.3
+info:
+  title: ABN Lookup
+  description: ABN lookup demo
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: mohit.f.aggarwal@accenture.com
+  version: 0.0.1
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://t7snohiumi.execute-api.ap-southeast-2.amazonaws.com/develop
+tags:
+  - name: lookup
+    description: ABN lookup
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /v1/lookup:
+    get:
+      tags:
+        - lookup
+      summary: ABN Lookup
+      description: Multiple status values can be provided with comma separated strings
+      operationId: abnLookupv1
+      parameters:
+        - name: x-api-key
+          in: header
+          description: api key for authorization
+          required: true
+          schema:
+            type: string
+        - name: x-user-id
+          in: header
+          description: user id
+          required: true
+          schema:
+            type: string
+        - name: abn
+          in: query
+          description: abn value to be queried
+          required: true
+          explode: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema: 
+                  $ref: '#/components/schemas/AbnLookUpResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorised
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '405':
+          description: Not Allowed
+        '408':
+          description: Request Timeout
+        '415':
+          description: Unsupported Media Type
+        '422':
+          description: Unprocessable Entity
+        '500':
+          description: Internal Server Error
+        '501':
+          description: Method Not Implemented
+  /v1/address:
+    get:
+      tags:
+        - lookup
+      summary: ABN Lookup
+      description: Multiple status values can be provided with comma separated strings
+      operationId: abnAddressLookupv1
+      parameters:
+        - name: x-api-key
+          in: header
+          description: api key for authorization
+          required: true
+          schema:
+            type: string
+        - name: x-user-id
+          in: header
+          description: user id
+          required: true
+          schema:
+            type: string
+        - name: abn
+          in: query
+          description: abn value to be queried
+          required: true
+          explode: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema: 
+                  $ref: '#/components/schemas/Address'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorised
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '405':
+          description: Not Allowed
+        '408':
+          description: Request Timeout
+        '415':
+          description: Unsupported Media Type
+        '422':
+          description: Unprocessable Entity
+        '500':
+          description: Internal Server Error
+        '501':
+          description: Method Not Implemented
+  
+  /v1/entity:
+    get:
+      tags:
+        - lookup
+      summary: ABN Lookup
+      description: Multiple status values can be provided with comma separated strings
+      operationId: abnEntityLookupv1
+      parameters:
+        - name: x-api-key
+          in: header
+          description: api key for authorization
+          required: true
+          schema:
+            type: string
+        - name: x-user-id
+          in: header
+          description: user id
+          required: true
+          schema:
+            type: string
+        - name: abn
+          in: query
+          description: abn value to be queried
+          required: true
+          explode: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema: 
+                  $ref: '#/components/schemas/Entity'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorised
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '405':
+          description: Not Allowed
+        '408':
+          description: Request Timeout
+        '415':
+          description: Unsupported Media Type
+        '422':
+          description: Unprocessable Entity
+        '500':
+          description: Internal Server Error
+        '501':
+          description: Method Not Implemented
+          
+components:
+  schemas:
+
+    AbnLookUpResponse:
+      type: object
+      properties:
+        entity:
+          $ref: '#/components/schemas/Entity'
+        address:
+          $ref: '#/components/schemas/Address'
+
+    
+    Address:
+      type: object
+      properties:
+        streetNumber:
+          type: string
+        suburb:
+          type: string
+        country:
+          type: string
+        pincode:
+          type: string
+        adressType:
+          type: string
+          
+    Entity:
+      type: object
+      properties:
+        EntityName:
+          type: string
+        ABNStatus:
+          type: string
+        EntityType:
+          type: string
+        GST:
+          type: string
