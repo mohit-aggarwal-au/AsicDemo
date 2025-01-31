@@ -26,8 +26,8 @@ spec:
   lifecycle: production
   owner: user:guest
   providesApis:
-    - payment-api
+    - abn_lookup_demo_v1
   consumesApis:
-    - user-profile-api
+    - abn_lookup_demo_v2
   definition:
     $text: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/LookupV1.yaml
