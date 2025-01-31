@@ -6,7 +6,7 @@ metadata:
     - lookup
     - microservices
   links:
-    - url: https://monitoring.example.com/payment-service
+    - url: https://google.com
       title: Monitoring Dashboard
       icon: dashboard
     - url: https://docs.example.com/payment-service
