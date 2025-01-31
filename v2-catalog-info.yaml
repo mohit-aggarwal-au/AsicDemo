@@ -26,7 +26,7 @@ spec:
   lifecycle: production
   owner: user:guest
   providesApis:
-    - payment-api
+    - abn_acn_lookup_demo_v2
   consumesApis:
     - user-profile-api
   definition:
