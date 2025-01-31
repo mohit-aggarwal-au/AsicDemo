@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: ABN or ACN Lookup
+  title: ABN or ACN Lookup v2
   description:  ABN or ACN Lookup Demo
   termsOfService: http://swagger.io/terms/
   contact:
