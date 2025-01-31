@@ -28,6 +28,6 @@ spec:
   providesApis:
     - abn_lookup_demo_v1
   consumesApis:
-    - abn_lookup_demo_v2
+    - abn_acn_lookup_demo_v2
   definition:
     $text: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/LookupV1.yaml
