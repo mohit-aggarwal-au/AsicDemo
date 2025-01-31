@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: service-b
+  description: "Service B consuming Service A API"
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: production
+  owner: team-b
+  consumesApis:
+    - service-a-api  # Defines the API it consumes
