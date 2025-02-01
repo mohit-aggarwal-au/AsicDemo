@@ -23,7 +23,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: develop
-  owner: user:guest
+  owner: ms-squad-a
   providesApis:
     - entity_lookup_v1
   definition:
