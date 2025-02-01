@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: address_lookup_v1
+  tags:
+    - address
+    - microservices
+  links:
+    - url: https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/fpai38ezvk/dashboard?api=fpai38ezvk&region=ap-southeast-2
+      title: Monitoring Dashboard
+      icon: dashboard
+    - url: https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/fpai38ezvk/documentation?api=fpai38ezvk&region=ap-southeast-2
+      title: API Documentation
+      icon: docs
+    - url: https://ap-southeast-2.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-2#logsV2:log-groups/log-group/$252Faws$252Flambda$252Faddress-lookup-lambda
+      title: Logs Viewer
+      icon: logs
+  annotations:
+    backstage.io/techdocs-ref: https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/fpai38ezvk/documentation?api=fpai38ezvk&region=ap-southeast-2
+    github.com/project-slug: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/addressV1.yaml
+    monitoring-url: https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/fpai38ezvk/dashboard?api=fpai38ezvk&region=ap-southeast-2
+  description: Address Lookup REST API
+spec:
+  type: openapi
+  lifecycle: develop
+  owner: ms-squad-b
+  providesApis:
+    - address_lookup_v1
+  definition:
+    $text: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/addressV1.yaml
