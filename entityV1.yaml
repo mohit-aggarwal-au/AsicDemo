@@ -9,8 +9,6 @@ info:
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
-servers:
-  - url: https://t7snohiumi.execute-api.ap-southeast-2.amazonaws.com/develop
 tags:
   - name: lookup
     description: ABN lookup
