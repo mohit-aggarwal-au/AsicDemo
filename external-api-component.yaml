@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: external-services
+  description: "External services that are exposed to outside world"
+  annotations:
+    backstage.io/techdocs-ref: https://editor.swagger.io/
+spec:
+  type: service
+  lifecycle: develop
+  owner: ms-squad-c
+  providesApis:
+    - lookup-v2
