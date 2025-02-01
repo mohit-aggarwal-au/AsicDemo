@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: lookup_v2
+  name: lookup-v2
   tags:
     - lookup
     - microservices
@@ -17,7 +17,7 @@ metadata:
       icon: logs
   annotations:
     backstage.io/techdocs-ref: https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/3s9i0jsi46/documentation?api=3s9i0jsi46&region=ap-southeast-2
-    github.com/project-slug: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/lookup_v2.yaml
+    github.com/project-slug: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/lookup-v2.yaml
     monitoring-url: https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/3s9i0jsi46/dashboard?api=3s9i0jsi46&region=ap-southeast-2
   description: Lookup V2 REST API
 spec:
@@ -25,6 +25,6 @@ spec:
   lifecycle: develop
   owner: ms-squad-c
   providesApis:
-    - lookp_v2
+    - lookp-v2
   definition:
-    $text: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/lookup_v2.yaml
+    $text: https://github.com/mohit-aggarwal-au/AsicDemo/blob/main/lookup-v2.yaml
