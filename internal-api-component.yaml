@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: internal-services
+  description: "Internal services that are not exposed to outside world"
+  annotations:
+    backstage.io/techdocs-ref: https://editor.swagger.io/
+spec:
+  type: service
+  lifecycle: develop
+  owner: ms-squad-a
+  providesApis:
+    - entity_lookup_v1  
+    - address_lookup_v1  
