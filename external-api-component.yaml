@@ -11,3 +11,6 @@ spec:
   owner: ms-squad-c
   providesApis:
     - lookup-v2
+  consumesApis:
+   - entity_lookup_v1
+   - address_lookup_v1
