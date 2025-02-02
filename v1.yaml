@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: ABN Lookup
+  title: ABN Lookup V1
   description: ABN lookup demo
   termsOfService: http://swagger.io/terms/
   contact:
