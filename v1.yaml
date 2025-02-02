@@ -81,10 +81,6 @@ components:
       properties:
         EntityName:
           type: string
-        ABN:
-          type: number
-        ACN:
-          type: number
         ABNStatus:
           type: string
         EntityType:
